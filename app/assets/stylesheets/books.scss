@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,body {
+    line-height: 1.57;
+      letter-spacing: 0.15em;
+      font-size: 16px;
+      margin: 0;
+      font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    // position: fixed;
+    z-index: 999;
+    height: 75px;
+    width: 100%;
+    background-color: #292929;
+
+}
+
+.k_header {
+    display: flex;
+    .button_to {
+        display: inline;
+        margin: 0px;
+        .rental {
+            background-color: #313131;
+        }
+    }
+}
+
+.header-title {
+    // margin: 0 auto;
+    color: #fff;
+    padding: 25px;
+    padding-right: 1080px;
+    font-weight: bold;
+    text-align: center;
+    .k_btn {
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.books {
+    // padding-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    margin: 30px;
+    text-decoration: none;
+    display: block;
+    width: 178px;
+    height: 300px;
+    background-size : 100% 100%;
+    justify-content: space-between;
+    border: solid 1px rgb(0, 0, 0);
+    // -webkit-filter: grayscale(-50%);
+}
+
+.book_no {
+    margin: 30px 30px 0 30px;
+    text-decoration: none;
+    display: block;
+    width: 178px;
+    height: 300px;
+    background-size : 100% 100%;
+    justify-content: space-between;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+.rental-text {
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+}
+
+
+.show-page {
+    // padding-top: 75px;
+    display: flex;
+    height: calc(100% - 75px);
+}
+
+.book-image {
+    margin: 30px;
+    width: 440px;
+    background-size : 100% 100%;
+    border: solid 2px black;
+}
+
+.detail {
+    height: 200px;
+    width: 900px;
+    margin: 30px;
+    border: solid 2px black;
+    .book-title {
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: solid 2px black;
+    }
+    .author {
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: solid 2px black;
+    }
+    .rate {
+        padding: 10px 0;
+        text-align: center;
+        align-items: center;
+        border-bottom: solid 2px black;
+        .a_btn {
+            text-decoration: none;
+            font-size: 12px;
+        }
+    }
+
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.reviews {
+    height: 421px;
+    border: solid 2px black;
+    margin: 30px;
+}
+
+.rental-form {
+    margin: 8px 375px;
+}
+
+.rental {
+        display:block;
+        width: 150px;
+        height:40px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 15px;
+        // background-color: #00bcd4; /*ボタン色*/
+        border-radius: 5px; /*角丸*/
+        transition: all 0.5s;
+        background-color: #000000d4; /*ボタン色*/
+        background-origin: solid 2px #000000d4;
+}
+
+.rental:hover{
+    background-color: #00000096; /*ボタン色*/
+}
+
+.review-header {
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    border-bottom: solid 2px black;
+}
+
+.review-text {
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 25px;
+    width: calc(100vw -420px);
+    // position: relative;
+    // left: 50%;
+    // right: 50%;
+    // margin-left: -50vw;
+    // margin-right: -50vw;
+    // overflow: hidden;
+}
+
+.review-list {
+    list-style: none;
+    border-bottom: dotted 2px black;
+}
+
+.non-review-list {
+    padding-top: 30px;
+    list-style: none;
+}
+
+.review {
+    margin: 10px 0px 18px 10px;
+}
+
+ul {
+    height: 323px;
+    border-bottom: dotted 2px black;
+    margin: 0;
+    padding: 0;
+}
+
+.reviewer-status {
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.review-title {
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.reviewer-name {
+    font-size: 12px;
+}
+
+.reviews-btn {
+    padding-right: 10px;
+    text-align: right;
+    .a_btn {
+        text-decoration: none;
+        font-size: 12px;
+    }
+}
+
+dd {
+    margin-left: 0;
+    margin-top: 11px;
+}
+
+.add-container {
+    margin-top: 350px;
+    .a_row {
+        margin: 0 -250px 0 250px;
+    }
+    .form-field {
+        margin: 32px 0;
+    }
+    .rate-form {
+        border-bottom: 2px;
+    }
+    .review_form {
+        height: 300px;
+        border-width: 2px;
+    }
+}

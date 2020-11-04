@@ -1,0 +1,14 @@
+<div class="books">
+    <% @books.each do |book| %>
+        <% if book.rental %>
+            <div>
+                <%= link_to "", "/books/#{book.id}", class: :book_no, :style=>"background-image: url(#{book.image});" %>
+                <div class="rental-text">レンタル中</div>
+            </div>
+        <% else %>
+            <div>
+                <%= link_to "", "/books/#{book.id}", class: :book, :style=>"background-image: url(#{book.image});" %>
+            </div>
+        <% end %>
+    <% end %>
+</div>

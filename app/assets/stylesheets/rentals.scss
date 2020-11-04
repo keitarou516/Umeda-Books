@@ -1,0 +1,212 @@
+.rental-page {
+    display: flex;
+    height: calc(100% - 75px);
+    // padding-top: 75px;
+    .detail {
+        height: 141px;
+        .rate {
+            padding: 15px 0;
+            border-bottom: 0;
+        }
+    }
+}
+
+// .rental_form {
+//     height: 421px;
+//     border: solid 2px black;
+//     margin: 30px;
+//     text-align: left;
+//     .name_field {
+//         padding: 60px;
+//         border-bottom: solid 2px black;
+//     }
+//     .date_field {
+//         padding: 60px;
+//         border-bottom: solid 2px black;
+
+//     }
+//     .rental_btn {
+//         padding: 50px 0 50px 0;
+//         text-align: center;
+
+
+//     }
+// }
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
+
+// Helpers
+@mixin clearfix {
+   &:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+.align-center {
+   text-align: center;
+}
+
+
+// Basics
+html {
+   height: 100%;
+}
+body {
+   height: 100%;
+   position: relative;
+}
+// Grid
+.a_row {
+   @include clearfix;
+   margin: -20px 0;
+   .col {
+      padding: 0 20px;
+      float: left;
+      box-sizing: border-box;
+      &.x-50 {
+         width: 50%;
+      }
+      &.x-100 {
+         width: 100%;
+      }
+   }
+}
+
+// .content-wrapper {
+//    min-height: 100%;
+//    position: relative;
+// }
+
+.form_title {
+    max-width: 650px;
+    margin-top: 450px;
+    margin: 250px 50px 0px 160px;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+
+  .title {
+     text-align: center;
+     font-family: Raleway, sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     font-size: 36px;
+     line-height: 48px;
+     padding-bottom: 48px;
+  }
+}
+
+.rental_form {
+   .form-field {
+    //   position: relative;
+      margin: 32px 0;
+   }
+   input[type="text"], input[type="date"] {
+      display: block;
+      width: 100%;
+      height: 36px;
+      border-width: 0 0 2px 0;
+      border-color: #000;
+    //   font-family: Lusitana, serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      
+      &:focus {
+         outline: none;
+      }
+      
+      &:focus,
+      &.not-empty {
+         + .label {
+            transform: translateY(-24px);
+         }
+      }
+   }
+   .label {
+      position: absolute;
+      left: 20px;
+      bottom: 11px;
+    //   font-family: Lusitana, serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #888;
+      cursor: text;
+      transition: transform .2s ease-in-out;
+   }
+   
+   .submit-btn {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      font-family: Raleway, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+   }
+}
+
+.note {
+//    position: absolute;
+   left: 0;
+   bottom: 10px;
+   width: 100%;
+   text-align: center;
+//    font-family: Lusitana, serif;
+   font-size: 16px;
+   line-height: 21px;
+   
+   .link {
+      color: #888;
+      text-decoration: none;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+
+.k_contents {
+    // padding-top: 75px;
+    margin-left: 400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 660px;
+    border-radius: 5px; /*角丸*/
+    .message {
+        text-align: center;
+        font-size: 35px;
+        padding: 150px 0 0 0;
+    }
+}
+
+
+.success {
+    margin: 30px 0;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+    background-color: white;
+    border: solid 2px #000000d4;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    .a_btn {
+        text-decoration: none;
+        font-size: 12px;
+        font-size: 16px;
+    }
+}
+

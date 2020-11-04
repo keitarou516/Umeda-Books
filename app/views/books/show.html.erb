@@ -1,0 +1,62 @@
+<div class="show-page">
+    <div class="book-image" style="background-image: url(<%= @book.image %>);"></div>
+    <div>
+        <div class="detail">
+            <div class="book-title"><%= @book.name %></div>
+            <div class="author"><%= @book.author %>(著)</div>
+            <div class="rate">
+            <% if @avg %>
+                <span class="star5_rating" data-rate="<%= @avg %>"></span>
+                <%= link_to " #{ @rate.length }件のレビュー", "/books/#{params[:id]}/reviews/", class: :a_btn %>
+            <% else %>
+                <span>まだレビューはありません</span>
+            <% end %>
+            </div>
+            <div class="rental-form">
+            <% if @book.rental %>
+                <%= button_to 'Return', "/books/#{@book.id}/rentals/#{@id}", method: :delete, class: :rental, data: {confirm: '返却しますか?', verify: "#{@name}", verify_text: '名前を入力してください'} %>
+            <% else %>
+                <%= button_to "Rental", "/books/#{params[:id]}/rentals/new", method: :get, class: :rental %>
+            <% end %> 
+            </div>
+        </div>
+        <div class="reviews">
+            <div class=review-header>この本を読んだ他の方の感想</div>
+            <% if @reviews.length > 0 %>
+            <ul>
+                <% @reviews.each do |review| %>
+                <li class="review-list">
+                    <dl class="review">
+                        <dt class="reviewer-status">
+                            <span>
+                                <span class="star5_rating" data-rate="<%= review.rate.truncate(50) %>"></span>                                
+                                <span class="reviewer-name"><%= review.name %></span>
+                            </span>
+                        </dt>
+                        <dt class="review-title"><%= review.title %></dt>
+                        <dd><span class="review-text"><%= review.text %></span></dd>
+                    </dl>
+                </li>
+                <% end %>
+            </ul>
+            <div class="reviews-btn">
+                <%= link_to "全てのレビューを見る (#{@rate.length}件)", "/books/#{params[:id]}/reviews/", class: :a_btn %> /
+                <%= link_to "レビューを書く", "/books/#{params[:id]}/reviews/new", class: :a_btn %>
+            </div>
+            <% else %>
+            <ul>
+                <li class="non-review-list">
+                    <dl class="review">
+                        <dt class="review-title"></dt>
+                        <dd><span>まだレビューはありません。</span></dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="reviews-btn">
+                <span class="a_btn">全てのレビューを見る (0件)</span> /
+                <%= link_to "レビューを書く", "/books/#{params[:id]}/reviews/new", class: :a_btn %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>

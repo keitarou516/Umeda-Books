@@ -1,0 +1,36 @@
+<div class="contents">
+    <div class="review-btn">
+        <%= button_to "レビューを書く", "/books/#{params[:book_id]}/reviews/new", method: :get, class: :review_btn %>
+    </div>
+    <div class="review-content">
+        <div>
+            <ul class="reviews">
+                <% @reviews.each do |review| %>
+                <li class="review">
+                    <div class="more">
+                        <span><%= image_tag 'arrow_top_black.png', class: "image" %></span>
+                        <ul class="more_list">
+                            <li>
+                            <%= link_to '削除', "/books/#{params[:book_id]}/reviews/#{review.id}", method: :delete %>
+                            </li>
+                        </ul>
+                    </div>
+                    <dl class="data-list">
+                        <dt class="reviwer-status">
+                            <span>
+                                <span class="star5_rating_2" data-rate="<%= review.rate.truncate(50) %>"></span>                                
+                                <span class="reviewer-name"><%= review.name %></span>
+                            </span>
+                        </dt>
+                        <dt class="review-title"><%= review.title %></dt>
+                        <dd><span class="review-text"><%= review.text %></span></dd>
+                    </dl>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="paginate">
+            <%= paginate(@reviews) %>
+        </div>
+    </div>
+</div>

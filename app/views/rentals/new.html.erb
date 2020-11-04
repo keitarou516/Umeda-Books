@@ -1,0 +1,41 @@
+<div class="rental-page">
+    <div class="book-image" style="background-image: url(<%= @book.image %>);"></div>
+    <div>
+        <div class="detail">
+            <div class="book-title"><%= @book.name %></div>
+            <div class="author"><%= @book.author %>(著)</div>
+            <div class="rate">
+            <% if @avg %>
+                <span class="star5_rating" data-rate="<%= @avg %>"></span>
+                <%= link_to " #{ @rate.length }件のレビュー", "/books/#{params[:book_id]}/reviews/", class: :a_btn %>
+            <% else %>
+                <span>レビューなし</span>
+            <% end %>
+            </div>
+        </div>
+        <section class="form_title">
+            <h1 class="title">Rental</h1>
+            <div class="rental_form">
+            <div class="k-container">
+            <%= form_for [@book, @rental] , html: { class: "contact-form", class: "a_row" } do |f| %>
+                <div class="form-field col x-50">
+                    <%= f.label :Name %>
+                    <%= f.text_field :name, placeholder: 'Name', value: '' %>
+                </div>
+                <div class="form-field col x-50">
+                    <%= f.label :Checkout_Date %>
+                    <%= f.date_field :checkout_date, value: Time.now.strftime("%Y-%m-%d") %>
+                </div>
+                <%= f.hidden_field :book_id, :value => @book.id %>
+                <%= f.hidden_field :stock, :value => 0 %>
+                <div class="rental_btn">
+                    <div class="form-field col x-100 align-center">
+                    <%= button_tag type: "submit", class: "submit-btn" do %>
+                        Rental<i class="icon-arrow-right"></i>
+                    <% end %>
+                </div>
+            <% end %>
+            </div>
+        </section>
+    </div>
+</div>

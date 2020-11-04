@@ -1,0 +1,215 @@
+.star5_rating{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC; /* グレーカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before, .star5_rating:after{
+    content: '★★★★★';
+}
+
+.star5_rating:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+.review-btn {
+    margin: 50px 0px 0px 380px;
+}
+
+
+.button_to{
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contents {
+    margin-left: 220px;
+    margin-right: 100px;
+    .review_btn {
+        display: block;
+        width: 250px;
+        height: 75px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        /* margin-top: 15px; */
+        font-size: 20px;
+        border-radius: 5px;
+        transition: all 0.5s;
+        background-color: #000000d4;
+    }
+    .review-content {
+        height: 1000px;
+        padding-top: 50px;
+        margin-bottom: 100px;
+        .reviews {
+            width: 1000px;
+            height: 940px;
+            border-bottom: solid 0px black;
+            margin: 0;
+            .review {
+                position: relative;
+                height: 188px;
+                margin: 0;
+                padding: 20px;
+                border-bottom: dotted 2px black;
+                list-style: none;
+                .reviewer-name {
+                    padding-left: 10px;
+                    font-size: 16px;
+                }
+                .review-title {
+                    padding-top: 10px;
+                }
+                dd {
+                    margin-top: 5px;
+                    .review-text {
+                        padding: 25px 0;
+                    }
+                }
+            }
+        }
+        .paginate {
+            width: 1000px;
+            height: 50px;
+            border: solid 2px black;
+            .pagination {
+                display: inline-block;
+                padding-left: 15px;
+                margin: 15px 0;
+                border-radius: 4px;;
+            }
+        }
+    }
+}
+
+.star5_rating_2{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC; /* グレーカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating_2:before, .star5_rating_2:after{
+    content: '★★★★★';
+    font-size: 25px;
+}
+
+.star5_rating_2:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating_2[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating_2[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating_2[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating_2[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating_2[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating_2[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating_2[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating_2[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating_2[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating_2[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating_2[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+.review_form {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-width: 0 0 2px 0;
+    border-color: #000;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.review-container {
+    margin-top: 350px;
+    .a_row {
+        margin: 0 -250px 0 250px;
+    }
+    .form-field {
+        margin: 10px 0;
+    }
+    .rate-form {
+        border-bottom: 2px;
+    }
+    .review_form {
+        height: 300px;
+        border-width: 2px;
+    }
+}
+
+.image {
+    height: 15px;
+    width: 15px;
+}
+.more {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    height: 100px;
+    width: 80px;
+    text-align: right;
+    &:hover ul.more_list {
+      display: block;
+}
+ul.more_list {
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    line-height: 38px;
+    width: 50px;
+    height: 38px;
+    right: 0;
+    font-size: 12px;
+    background-color: #1f1e1ed4;
+    border: 1px solid #000000d4;
+    display: none;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    li {
+      border-bottom: 1px solid #ddd;
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        color: white;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
